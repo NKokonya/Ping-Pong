@@ -1,72 +1,36 @@
-/*function pingPong(number) {
-  const divisibleBy5 = number % 5 === 0;
-  const divisibleBy3 = number % 3 === 0;
-  let result = "";
+//Back-end code
 
-  if (divisibleBy5 && divisibleBy3) {
-    result = "pingpong";
-  }
-  else if (divisibleBy3) {
-    result = "ping";
-  }
-  else if (divisibleBy5) {
-    result = "pong";
-  }
-  else {
-    result = number;
-  }
+function pingPong() {
+ $('#number-chooser').submit(function(event) {
+    event.preventDefault();
 
-  return result;
+console.log($('#number-choice').val());
+var input = $('#number-choice').val();
+
+var fizzArray = [];
+for (i=1; i<=input; i++) {
+
+if (i % 15 === 0){
+  fizzArray.push("fizzbuzz");
+}
+else if (i % 5 === 0) {
+  fizzArray.push("buzz");
+}
+else if (i % 3 === 0){
+  fizzArray.push("fizz");
+}
+else fizzArray.push(i);
+}
+console.log(fizzArray);
+
+fizzArray.forEach(function(thing) {
+  var newSpan = $( '<div class="fizz-buzz-item"><span>' + thing + '</span></div>');
+  if (thing === "fizz" || thing === "buzz" || thing === "fizzbuzz") {
+    newSpan.addClass(thing);}
+
+$('.js-results').append(newSpan);
+});
+});
 }
 
-$("form#run-pingpong").submit(function(event) {
-  event.preventDefault();
-  const input = $("#numberchooser").val();
-  console.log(input);
-  const output = pingPong(input);
-
-  $("#result-pinpong").append(`
-    <div class="ping-pong-item">
-      <span>${output}</span>
-    </div>
-  `
-  );
-});
-*/
-
-var pingPong = function (enterNumber){
-  for (var i = 0; i <=enterNumber; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      $("result-pinpong").append("<li> + Ping-Pong!")
-    }
-
-    else if (i % 3 === 0) {
-      $("result-pinpong").append("<li> + Ping")
-    }
-
-    else if (i % 5 === 0) {
-      $("result-pingpong").append("<li> + Pong")
-    }
-
-    else {
-      $("result-pingpong").append("<li> + enterNumber")
-    }
-
-  }
-
-
-$(document).ready(function() {
-  $("form#run-pingpong").submit(function(event) {
-    event.preventDefault();
-    pingPong();
-  })
-})
-
-
-/*$(document).ready(function() {
-  $("form#run-pingpong").submit(function(event){
-    event.preventDefault();
-    pingPong();
-
-  });
-}); */
+$(pingPong);
