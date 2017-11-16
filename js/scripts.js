@@ -23,12 +23,12 @@ else pingpongArray.push(i);
 }
 console.log(pingpongArray);
 
-pingpongArray.forEach(function(thing) {
-  var newSpan = $( '<div class="ping-pong-output"><span>' + thing + '</span></div>');
-  if (thing === "ping" || thing === "pong" || thing === "pingpong") {
-    newSpan.addClass(thing);}
+pingpongArray.forEach(function(square) {
+  var newSpan = $( '<div class="ping-pong-output"><span>' + square + '</span></div>');
+  if (square === "ping" || square === "pong" || square === "pingpong") {
+    newSpan.addClass(square);}
 
-$('.js-results').append(newSpan);
+$('.pingpong-results').append(newSpan);
 });
 });
 }
