@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Ping-Pong</title>
-          <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-          <link href="css/styles.css" rel="stylesheet" type="text/css">
-          <script src="js/jquery-3.2.1.min.js"></script>
-          <script src="js/scripts.js"></script>
-        </head>
-        <body>
-          <div class="container-fluid text-center">
-            <h1>Ping-Pong</h1>
-          </div>
-          <div class="row">
-            <div class="col-sm" id="aboutme">
-              <h2>About Ping Pong</h2>
-              <h3>Created By:</h3>
-              <p>Nicole Kokonya</p>
-              <h2>GitHub Username/URL:</h2>
-              <a href="https://github.com/NKokonya">NKokonya</a>
-            </div>
-            <div class="col-sm" id="aboutpingpong">
-              <h2>Let's Play</h2>
-              <h3>Rules:</h3>
-              <p>Ping Pong will count up to your number from 1 with the following exceptions:</p>
-              <ol>
-                <li>Numbers divisible by 3 become "ping"</li>
-                <li>Numbers divisible by 5 become "pong"</li>
-                <li>Numbers divisible by 3 and 5 become "pingpong"</li>
-              </ol>
+<html>
 
-                <form class="form-inline" id="number-chooser">
-                  <div class="form-group">
-                    <label for="number-choice">Enter your number here:</label>
-                    <input id="number-choice" name="number-choice" class="form-control" type="number" required>
-                  </div>
+<head>
+  <title>Ping-Pong</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
 
-                  <button type="submit" class="btn btn-primary">Ping Pong!</button>
-                </form>
+<body>
+  <div class="container-fluid text-center" id="header">
+    <h1>Ping-Pong</h1>
+    <img src="css/pingpong.gif" alt="Ping Pong GIF" id="pingpong-gif">
+  </div>
+  <div class="row">
+    <div class="col-xs-3" id="aboutme">
+      <h3>About Ping Pong</h3>
+      <h3>Created By:</h3>
+      <p>Nicole Kokonya</p>
+      <h3>GitHub Username:</h3>
+      <a href="https://github.com/NKokonya">NKokonya</a>
+    </div>
+    <div class="col-xs-9" id="aboutpingpong">
+      <h2>Let's Play</h2>
+      <h3>Rules:</h3>
+      <p>Ping Pong will count up to your number from 1 with the following exceptions:</p>
+      <ol>
+        <li>Numbers divisible by 3 become "ping"</li>
+        <li>Numbers divisible by 5 become "pong"</li>
+        <li>Numbers divisible by 3 and 5 become "pingpong"</li>
+      </ol>
 
-              <div class="js-results">
+      <form class="form-inline" id="number-chooser">
+        <div class="form-group">
+          <label for="number-choice">Enter your number here:</label>
+          <input id="number-choice" name="number-choice" class="form-control" type="number" required>
+        </div>
 
-              </div>
+        <button type="submit" class="btn btn-primary">Ping Pong!</button>
+      </form>
+
+      <div class="js-results">
+
+      </div>
 
 
-              </div>
-            </div>
-        </body>
-      </html>
+    </div>
+  </div>
+</body>
+
+</html>
